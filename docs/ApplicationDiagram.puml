@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+' The application class will follow the requirements of containing only the launch command, and
+' enough code to launch the first GUI in the start method.
+class Application
+{
+main()
+start(Stage primaryStage)
+}
+
+' This will be a list item that holds 
+class ToDoListItem()
+{
+    String listGoal
+    boolean isComplete
+    ToDoListItem(String listGoal, boolean isComplete)
+}
+class ToDoList(ArrayList<ToDoListItem> toDoList = new ToDoList<ToDoListItem>())
+{
+
+}
+@enduml
