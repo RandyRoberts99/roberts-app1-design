@@ -6,7 +6,7 @@ plugins {
 
 javafx {
     version = "17"
-    modules = [ 'javafx.controls' , 'javafx.fxml' ]
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
 group 'org.example'
@@ -25,4 +25,4 @@ test {
     useJUnitPlatform()
 }
 
-mainClassName = "app.ListApp"
+mainClassName = "listapplication.MainApplication"

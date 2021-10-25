@@ -6,18 +6,24 @@
 class Application
 {
 main()
-start(Stage primaryStage)
+start(Stage stage)
 }
 
-' This will be a list item that holds 
-class ToDoListItem()
+' This will be an object that holds a list of objects that contain data about each
+' item in the list, hence the name listItem
+class ListItem
 {
     String listGoal
     boolean isComplete
-    ToDoListItem(String listGoal, boolean isComplete)
+    String date
+    ListItem(String listGoal, boolean isComplete, String date)
 }
-class ToDoList(ArrayList<ToDoListItem> toDoList = new ToDoList<ToDoListItem>())
+' This object will hold all the properties of an item in the to do list.
+class List
 {
-
+    List(ListItem[])
 }
+
+List <|-- ListItem
+
 @enduml
