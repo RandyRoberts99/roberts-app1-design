@@ -3,12 +3,37 @@
 
 ' The application class will follow the requirements of containing only the launch command, and
 ' enough code to launch the first GUI in the start method.
-class Application
+class MainApplication
 {
 main()
 start(Stage stage)
 }
 
+' This class deals with all the events inside the app and how they will relate to the
+' other bits of code associated with the app
+class MainFXMLController
+{
+Button addButton
+Button deleteButton
+Button editButton
+
+ListView<?> mainList
+MenuBar appMenuBar
+
+MenuItem loadButton
+MenuItem saveButton
+MenuItem newListItem
+MenuItem closeButton
+
+
+addListItem()
+attemptCloseApp()
+createNewList()
+deleteListItem()
+editListItem()
+loadList()
+saveCurrentList()
+}
 ' This will be an object that holds a list of objects that contain data about each
 ' item in the list, hence the name listItem
 class ListItem
@@ -23,7 +48,7 @@ class List
 {
     List(ListItem[])
 }
-
+MainApplication <|-- MainFXMLController
 List <|-- ListItem
 
 @enduml
